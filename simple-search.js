@@ -1,7 +1,7 @@
 /**
  * @param items - items to search amongst. Expecting { value, searchable }
- * @param - inputEl - the input element we will watch
- * @param - selectEl - the select element in which to put the results
+ * @param inputEl - the input element we will watch
+ * @param selectEl - the select element in which to put the results
  */
 const SimpleSearch = (items, inputEl, selectEl) => {
 
