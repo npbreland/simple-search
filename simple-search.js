@@ -3,7 +3,7 @@
  * @param - inputEl - the input element we will watch
  * @param - selectEl - the select element in which to put the results
  */
-const EasySearch = (items, inputEl, selectEl) => {
+const SimpleSearch = (items, inputEl, selectEl) => {
 
   // Actually fills in the selectEl with options
   const fillOptions = (items, selectEl) => {
