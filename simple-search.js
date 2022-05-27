@@ -20,7 +20,10 @@ const SimpleSearch = (items, inputEl, selectEl) => {
   // Listen for keyup and update the list on the fly
   inputEl.addEventListener('keyup', e => {
     const value = e.target.value;
-    const results = items.filter(i => i.searchable.indexOf(value) !== -1);
+    const results = items.filter(i => {
+      // toLowerCase() on both terms makes the search case-insensitive
+      return i.searchable.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+    });
     fillOptions(results, selectEl);
   });
 };
