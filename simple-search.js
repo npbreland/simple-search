@@ -28,8 +28,13 @@ const SimpleSearch = (items, inputEl, selectEl) => {
   });
 
   // Down arrow key (40) moves focus to selectEl
-  inputEl.addEventListener('keyup', e => {
-    if (e.keyCode === 40 && selectEl.options.length > 0) {
+  inputEl.addEventListener('keydown', e => {
+    if (
+      e.keyCode === 40 &&
+      selectEl.options.length > 0 &&
+      // Only do this if insertion point is at end of text
+      inputEl.selectionStart === inputEl.value.length
+    ) {
       selectEl.selectedIndex = 0;
       selectEl.focus();
     }
