@@ -53,17 +53,7 @@ const SimpleSearch = (items, inputEl, selectEl) => {
         inputEl.selectionStart = inputEl.selectionEnd = 10000;
       }, 0);
       inputEl.focus();
-
-    } else if (e.keyCode === 13) {
-      /* When enter (13) is pressed, Take control of form submission, since 
-       * Firefox does not submit form if pressing enter inside of a selectEl */
-      e.preventDefault();
-      const form = selectEl.form;
-      if (form.checkValidity()) {
-        selectEl.form.submit();
-      } else {
-        form.reportValidity()
-      }
     }
+
   });
 };
